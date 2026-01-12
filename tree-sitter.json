@@ -1,0 +1,38 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "pluto",
+      "camelcase": "Pluto",
+      "title": "PLUTO",
+      "scope": "source.pluto",
+      "file-types": [
+        "pluto"
+      ],
+      "injection-regex": "^pluto$",
+      "class-name": "TreeSitterPluto"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Procedure Language for Users in Test and Operations",
+    "authors": [
+      {
+        "name": "Soumyadeep"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/Soumyadeep-Chakravarti/treesitter-PLUTO"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
