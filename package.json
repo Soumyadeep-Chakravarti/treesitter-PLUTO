@@ -15,6 +15,14 @@
     "tree-sitter",
     "pluto"
   ],
+  "tree-sitter": [
+    {
+      "scope": "source.pluto",
+      "file-types": ["pluto"],
+      "highlights": "queries/highlights.scm",
+      "path": "."
+    }
+  ],
   "files": [
     "grammar.js",
     "tree-sitter.json",

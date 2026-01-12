@@ -4,13 +4,10 @@
     {
       "name": "pluto",
       "camelcase": "Pluto",
-      "title": "PLUTO",
       "scope": "source.pluto",
-      "file-types": [
-        "pluto"
-      ],
-      "injection-regex": "^pluto$",
-      "class-name": "TreeSitterPluto"
+      "file-types": ["pluto"],
+      "path": ".",
+      "highlights": "queries/highlights.scm"
     }
   ],
   "metadata": {
@@ -21,18 +18,6 @@
       {
         "name": "Soumyadeep"
       }
-    ],
-    "links": {
-      "repository": "https://github.com/Soumyadeep-Chakravarti/treesitter-PLUTO"
-    }
-  },
-  "bindings": {
-    "c": true,
-    "go": true,
-    "node": true,
-    "python": true,
-    "rust": true,
-    "swift": true,
-    "zig": false
+    ]
   }
 }

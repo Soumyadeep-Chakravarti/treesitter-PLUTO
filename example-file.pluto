@@ -1,0 +1,43 @@
+procedure HELLO_WORLD
+    preconditions
+        system element POWER_BUS is ON
+    end preconditions
+
+    declare
+        variable TARGET_VOLTAGE : real := 28.0 V
+        variable TIMEOUT_VAL : relative time := 00:00:10:00
+        variable STATUS : string := "INITIALIZING"
+    end declare
+
+    main
+        step 1: "Power Check"
+            initiate and confirm set POWER_BUS to 28.5 V
+            wait 5s
+        end step
+
+        step 2: "Logic Branch"
+            if TARGET_VOLTAGE > 25.0 V then
+                log "Voltage is within range."
+                inform user "System is Ready"
+            else
+                log "Voltage too low!"
+                abort
+            end if
+        end step
+
+        step 3: "Loop Example"
+            while POWER_BUS is ON do
+                step 3_1:
+                    log "Monitoring..."
+                    wait 00:00:01:00
+                end step
+            end while
+        end step
+    end main
+
+    watchdog
+        if POWER_BUS is OFF then
+            terminate
+        end if
+    end watchdog
+end procedure
